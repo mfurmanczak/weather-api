@@ -1,1 +1,0 @@
-http://uoweb3.ncl.ac.uk:80/metadata/api/sensors?theme=Weather
