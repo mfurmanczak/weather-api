@@ -17,7 +17,7 @@ print("What is the start time for the event? (HH:MM)")
 start = input()
 start = start.split(":")
 print(start)
-print("How long is the event?")
+print("How long is the event? (hours)")
 duration = input()
 duration = int(duration)
 
