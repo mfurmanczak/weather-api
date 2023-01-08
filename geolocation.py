@@ -1,15 +1,15 @@
-# importing geopy library
-import certifi
-import ssl
-import geopy.geocoders
-from geopy.geocoders import Nominatim
-import time
-from pprint import pprint
+# Next, import the library
+import geoip2.webservice
 
-#initiate a new Nominatim client
-app = Nominatim(user_agent="tutorial")
+# Set your user ID and license key
+user_id = 810838
+license_key = "IN21rmrxSV7w80kx" 
 
-# get location raw data
-location = app.geocode("Nairobi, Kenya").raw
-# print raw data
-pprint(location)
+# Use the geoip2.webservice.Client class to create a client object
+client = geoip2.webservice.Client(user_id, license_key)
+
+# Use the client's city() method to get the user's location
+response = client.city(ip_address='me')
+
+# Print the location
+print(response)
