@@ -11,6 +11,7 @@ events_result = service.events().list(
     orderBy='startTime').execute()
 events = events_result.get('items', [])
 
+# List the events
 if not events:
     print('No upcoming events found.')
 for event in events:
