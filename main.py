@@ -5,6 +5,7 @@
 import check_available
 from datetime import datetime
 import weather_gain
+import cal_setup
 
 new_city = weather_gain.get_city()
 
@@ -34,12 +35,14 @@ while(n != 0):
         minute = "0"+minute
     if int(second) < 10:
         second = "0"+second
+
     
     current_date_time = year+'-'+month+'-'+day+"T"+hour+":"+minute+":"+second+"Z"
     #(current_date_time)
     for pause in range(len(check_available.break_times)):
         # print(check_available.break_times[pause][0])
         # print(current_date_time)
-        if current_date_time == check_available.break_times[pause][0]:
+        # if current_date_time == check_available.break_times[pause][0]:
+        if current_date_time == "2023-01-13T14:29:00Z":
             print(weather_gain.get_weather(new_city))
             n = 0
