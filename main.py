@@ -43,6 +43,6 @@ while(n != 0):
         # print(check_available.break_times[pause][0])
         # print(current_date_time)
         # if current_date_time == check_available.break_times[pause][0]:
-        if current_date_time == "2023-01-13T14:29:00Z":
+        if current_date_time == "2023-01-16T13:28:00Z":
             print(weather_gain.get_weather(new_city))
             n = 0
