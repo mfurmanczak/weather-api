@@ -42,7 +42,13 @@ while(n != 0):
     for pause in range(len(check_available.break_times)):
         # print(check_available.break_times[pause][0])
         # print(current_date_time)
-        # if current_date_time == check_available.break_times[pause][0]:
-        if current_date_time == "2023-01-16T13:28:00Z":
+        
+        # 2 if statements:
+        
+            # This one checks break times with the calendar
+        if current_date_time == check_available.break_times[pause][0]:
+            
+            # This one waits for custom time to pass
+        # if current_date_time == "2023-01-16T13:28:00Z":
             print(weather_gain.get_weather(new_city))
             n = 0
